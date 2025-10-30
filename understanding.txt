@@ -1,0 +1,21 @@
+1. What does getCell(int row, int col) return if you pass invalid coordinates like (-1, 5)?
+
+The function checks whether the row and column are inside the board (0 ≤ row < 3 and 0 ≤ col < 3).
+If the coordinates are invalid it returns the space character ' ' (the same value used for empty cells).
+
+2. What does getWinner() return when there's no winner yet?
+
+It returns a single space character ' ' to indicate that no player has won.
+
+3. Explain why getWinner() is marked const but makeMove() is not.
+
+getWinner() only reads the board and does not modify any member variables, so it is declared const.
+makeMove() changes the board, the current player, and the move count, therefore it cannot be const.
+
+4. If the board is full but nobody has won, what should isGameOver() return?
+
+It should return true because the game is over (a tie).
+
+5. What value does getCurrentPlayer() return at the start of a new game?
+
+It returns 'X' – the first player always starts.
